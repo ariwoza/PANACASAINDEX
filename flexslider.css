@@ -238,22 +238,28 @@ nav .ulmenu .limenu ul a:hover{
          padding-left:60px;
        
     }
-    .down{
+    .cajadown{
         display:flex;
-        width:10%;
-        font-size: 20px;
-        color: #fff;
+        width:40%;
+        text-align: center;
         box-sizing: border-box;
         padding:15px;
         cursor: pointer;
+        
     } 
+    .down{
+        display:block;
+        color: #fff;
+        text-align: center;
+        width:100%;
+    }
     .servmenu{
         display:flex;
         flex-direction: row;
     }
     .servmenu a{
         display:flex;
-        width:90%;
+        width:60%;
     }
     
     
