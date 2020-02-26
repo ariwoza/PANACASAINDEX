@@ -1,4 +1,3 @@
-
 *{
     margin:0;
     padding:0;
@@ -32,9 +31,8 @@ header{
     
 }
 nav{
-    height:100px;
+    height:70px;
     width:100%;
-    /*background: #34495e;*/
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -43,6 +41,12 @@ nav{
     display:inline-block;
     margin-top: 1em;
     margin-left: 10%;
+    width:200px;
+    height:auto;
+}
+.cajalogo img{
+    max-width:100%;
+    object-fit: contain;
 }
 
 nav #icon{
@@ -60,7 +64,7 @@ nav #icon{
     float:right;
     margin-right: 40px;
     display: none;
-    margin-top:1.5em;
+    margin-top:1em;
     
 }
 .try{
@@ -76,7 +80,6 @@ nav #icon{
 }
 .hamburguesa{
     height: 15%;
-    background: black;
     width: 100%;
     
     
@@ -120,16 +123,41 @@ nav .ulmenu{
 }
 nav .ulmenu .limenu{
     display: inline-block;
-    margin-top: 40px;
+    margin-top: 30px;
     margin-right: 8px;
     margin-left: 8px;
     
 }
+nav .ulmenu ul{
+    display:none;
+}
+nav .ulmenu .limenu:hover ul{
+    display:block;
+    position:absolute;
+    margin-top: 20px;
+ 
+}
+nav .ulmenu .limenu ul a{
+    display:block;
+    padding: 15px 20px;
+    color:#fff;
+    text-decoration: none;
+    background: #222222;
+}
+.down{
+    display:none;
+    color:#3FEA50;
+    text-decoration: none;
+    font-size:25px;   
+}
+
+nav .ulmenu .limenu ul a:hover{
+    background:#3FEA50;
+}
 .limenu .amenu{
     color:#fff;
     font-size: 1em;
-    text-transform: uppercase;
-    padding: 7px 10px;
+    padding: 25px 10px;
     
 }
 .amenu.active,.amenu:hover{
@@ -154,11 +182,15 @@ nav .ulmenu .limenu{
          position:fixed;
          width: 100%;
          height: 100vh;
-         top:100px;
+         top:70px;
          left:-100%;
          text-align: center;
          transition: all .5s;
-         background: rgba(0, 0, 0, 0.9);
+          /* fallback for old browsers */
+          background: -webkit-linear-gradient(to right, #3fea50, #45f48e);
+          /* Chrome 10-25, Safari 5.1-6 */
+          background: linear-gradient(to right, #3fea50, #45f48e);
+          /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
          
      }
      .ulmenu .limenu{
@@ -170,17 +202,20 @@ nav .ulmenu .limenu{
          border-style: solid;
         border-width: 0 0 1px ;
         border-color: #fff;
-         
-         
 
      }
      .limenu .amenu{
          display: block;
-         padding: 2em 0;
+         padding: 1.5em 0;
+         text-align: left;
+         padding-left: 30px;
      }
      nav .ulmenu.show{
          left:0%;
 
+     }
+     .cajalogo{
+         width:130px;
      }
      .cajaicono{
          display: flex;
@@ -188,6 +223,39 @@ nav .ulmenu .limenu{
          align-items: center;
          justify-content: center;
      }
+     nav .ulmenu .limenu:hover ul{
+        display:none;
+        position: static;
+        margin-top: 0;
+    }
+    nav .ulmenu .limenu ul a{
+        margin:auto!important;
+        border-style: solid;
+       border-width: 0 0 1px ;
+       border-color: #fff;
+       padding:1.2em 0;
+       text-align: left;
+         padding-left:60px;
+       
+    }
+    .down{
+        display:flex;
+        width:10%;
+        font-size: 20px;
+        color: #fff;
+        box-sizing: border-box;
+        padding:15px;
+        cursor: pointer;
+    } 
+    .servmenu{
+        display:flex;
+        flex-direction: row;
+    }
+    .servmenu a{
+        display:flex;
+        width:90%;
+    }
+    
     
     
 }
@@ -301,8 +369,6 @@ nav .ulmenu .limenu{
     max-width:100%;
   }
   
-
-  
   .column h1 {
     margin-bottom:30px;
     text-align:center;
@@ -330,7 +396,7 @@ nav .ulmenu .limenu{
       width: 100%;
     }
     .container {
-        margin-top: 100px;
+        margin-top: 70px;
     }
   }
   
@@ -1090,3 +1156,8 @@ form.form_contact input[type="submit"]:hover{
 .mensaje-exito a:hover{
     background: #3371B6;
 }
+
+
+
+/*=======================================*/
+
